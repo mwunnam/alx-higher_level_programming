@@ -16,6 +16,6 @@
 ## __Task 2 Python script that print a string followed by a newline using print__
 	- This as smiple as using print
 
-## __Task 3 write python script which prints and number and a string using f-string
+## __Task 3 write python script which prints and number and a string using f-string__
 	- This is a way of printing where after that the return value is a string
 	it makes it possible to print complex outputs
