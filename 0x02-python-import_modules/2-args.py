@@ -9,7 +9,8 @@ if __name__ == "__main__":
     if count == 0:
         print("0 arguments.")
     elif count == 1:
-        print("1 argument:")
+        print("{} argument:".format(count))
+        print("{}: {}".format(count, args[1]))
 
     else:
         print("{} arguments:".format(count))
