@@ -8,5 +8,7 @@ if __name__ == "__main__":
     if count > 1:
         for x in range(1, count):
             print("{}: {}".format(x, args[x]))
+    else:
+        print("0 arguments.")
 
     
