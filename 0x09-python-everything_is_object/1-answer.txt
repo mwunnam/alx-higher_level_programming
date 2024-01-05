@@ -1,1 +1,1 @@
-addressof
+ctypes.addressof
