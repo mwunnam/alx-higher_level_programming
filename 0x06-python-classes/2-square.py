@@ -2,7 +2,7 @@
 """This module a module that define a class quare with attribute size."""
 
 
-class Square():
+class Square:
     """
     Initialize a sqare instance.
 
