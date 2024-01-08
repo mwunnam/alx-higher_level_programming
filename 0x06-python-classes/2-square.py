@@ -6,8 +6,6 @@ class Square:
     """
     Initialize a sqare instance.
 
-    Args:
-        size (int): The size of the square.
 
     Raises:
         TypeError: if size is not an integer.
@@ -15,6 +13,11 @@ class Square:
     """
 
     def __init__(self, size=0):
+        """ Initialize a new square
+            Args:
+        size (int): The size of the square.
+        """
+
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
 
