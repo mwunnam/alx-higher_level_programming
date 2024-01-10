@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Defines a text reading funciton """
 
 def read_file(filename=""):
     """ Read a text file (UTF9) and print its content of stdout
