@@ -1,15 +1,15 @@
 #!/usr/bin/python3
+""" Function that writes into a file """
 
-def read_file(filename=""):
-    """ Read a text file (UTF9) and print its content of stdout
 
+def write_file(filename="", text=""):
+    """ Function writes as string into a file and returns the number
+        of characters written
     parameters:
-    filename (str): The name of the file to be read, Default is
-                    empty strings
-    Returns:
-            None
+        -filename (str): the name of the file to written in
+        -text (str): text to be written
     """
+    with open(filename, mode="w", encoding="utf-8") as file:
+        count = file.write(text)
 
-    with open(filename, mode="r", encoding="utf-8) as file:
-        text = file.read()
-        print(content)
+    return count
