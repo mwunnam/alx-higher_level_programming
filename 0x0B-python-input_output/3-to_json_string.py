@@ -8,4 +8,4 @@ def to_json_string(my_obj):
     my_obj: Object to be converted
     Return: The JSON representation of the object
     """
-    return json.dumps(my_obj)
+    return json.dump(my_obj)
