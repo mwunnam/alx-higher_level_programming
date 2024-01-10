@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Defines a text reading funciton """
 
+
 def read_file(filename=""):
     """ Read a text file (UTF9) and print its content of stdout
 
@@ -12,4 +13,4 @@ def read_file(filename=""):
     """
 
     with open(filename, encoding="utf-8") as file:
-        print(file.read())
+        print(file.read(), end="")
