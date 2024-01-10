@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Function that ther  JSON format of string to python """
+import json
 
 
 def from_json_string(my_str):
@@ -8,6 +9,4 @@ def from_json_string(my_str):
     my_str: Object to be converted
     Return: The converted json to Python format
     """
-    import json
-
     return json.loads(my_str)
