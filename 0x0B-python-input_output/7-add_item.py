@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 import json
 from sys import argv
 from os import path
