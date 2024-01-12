@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+g!/usr/bin/python3
 """ Function that writes JSON file """
 
 
