@@ -1,42 +1,17 @@
 #!/usr/bin/python3
-import json
-from sys import argv
-from os import path
+
+"""Add all arguments to a Python list and save them to a file."""
 
 
-def save_to_json_file(my_obj, filename):
-    """Writes an object to a text file using its JSON representation
-       Parameters:
-       - my_obj: The object to be saved
-       - filename: The name of the file to save the JSON representation
-       Returns: None
-    """
-    with open(filename, mode="w", encoding="utf-8") as file:
-        json.dump(my_obj, file)
-
-
-def load_from_json_file(filename):
-    """Writes an object to a text file using its JSON representation
-       Parameters:
-       - my_obj: The object to be saved
-       - filename: The name of the file to save the JSON representation
-       Returns: None
-    """
-
-    with open(filename, encoding="utf-8") as file:
-        return json.load(file)
-
+import sys
 
 if __name__ == "__main__":
-    args = argv[1:]
-    file_name = "add_item.json"
+    save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+    load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-    if not path.exists(file_name):
-        new_list = []
-
-    else:
-        new_list = load_from_json_file(file_name)
-
-    new_list.extend(args)
-
-    save_to_json_file(new_list, file_name)
+    try:
+        items = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        items = []
+        items.extend(sys.argv[1:])
+        save_to_json_file(items, "add_item.json")
