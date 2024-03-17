@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import MySQLdb
+
+
 """
 A script which list all states fomr the database
 """
@@ -15,7 +17,7 @@ def list_states(username, passwd, database):
     db = MySQLdb.connect(host="localhost", port=3306, user=username,
                          passwd=passwd, db=database)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states ORDERED BY id ASC")
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
     rows = cursor.fetchall()
 
     for row in rows:
