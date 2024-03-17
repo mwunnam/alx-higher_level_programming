@@ -27,4 +27,8 @@ def list_states(username, passwd, database):
     db.close()
 
 
-if __name__ == "__main__"
+if __name__ == "__main__":
+    username = "your_username"
+    passwd = "your_password"
+    database = "your_database"
+    list_states(username, passwd, database)
