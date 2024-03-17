@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-import sys
-import MySQLdb
 """
 This script list only states starting with N
 """
+import sys
+import MySQLdb
+
 
 if __name__ == "__main__":
     db = db.connect(host="localhost", user=sys.argv[1],
