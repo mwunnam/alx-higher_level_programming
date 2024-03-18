@@ -11,7 +11,7 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3], port=3306)
     cursor = db.cursor()
     text = sys.argv[4]
-    cursor.execute("SELECT * FROM states WHERE name LIKE '%s'", (text, ))
+    cursor.execute("SELECT * FROM states WHERE name LIKE %s", (text, ))
     rows = cursor.fetchall()
     for row in rows:
         print(row)
