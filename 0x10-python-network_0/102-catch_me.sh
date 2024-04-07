@@ -1,3 +1,3 @@
 #!/bin/bash
 # This is to make a request to a server that cause a respose You got me!
-curl -sL -X POST 0.0.0.0:5000/catch_me
+curl -sL 0.0.0.0:5000/catch_me -H "Message:You got me!"
