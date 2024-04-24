@@ -7,6 +7,5 @@ const message = process.argv[3];
 fs.writeFile(filePath, message, 'utf-8', (err) => {
   if (err) {
     console.log(err);
-    return;
   }
 });
