@@ -8,8 +8,9 @@ request(url, (error, response, body) => {
     console.error(error);
   }
 
-  if (response !== 200) {
+  if (response.statusCode !== 200) {
     console.error('Unable to get get data');
+    return;
   }
   const todos = JSON.parse(body);
   const completedTasks = {};
