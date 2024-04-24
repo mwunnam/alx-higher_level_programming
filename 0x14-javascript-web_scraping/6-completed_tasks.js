@@ -6,11 +6,10 @@ const url = process.argv[2];
 request(url, (error, response, body) => {
   if (error) {
     console.error(error);
-    return;
   }
 
   if (response !== 200) {
-    console.error(`Unable to get get data ${request.response}`);
+    console.error('Unable to get get data');
   }
   const todos = JSON.parse(body);
   const completedTasks = {};
