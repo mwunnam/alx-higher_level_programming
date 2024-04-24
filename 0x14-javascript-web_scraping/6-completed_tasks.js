@@ -22,6 +22,6 @@ request(url, (error, response, body) => {
       completedTasks[todo.userId]++;
     }
   });
-  const formattedJson = JSON.stringify(completedTasks, null, 2).replace(/"/g, "'");
+  const formattedJson = JSON.stringify(completedTasks, null, 2).replace(/"/g, "'").replace(/\n\s*}/g, ' }');
   console.log(formattedJson);
 });
