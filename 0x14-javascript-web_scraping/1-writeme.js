@@ -9,6 +9,4 @@ fs.writeFile(filePath, message, 'utf-8', (err) => {
     console.log(err);
     return;
   }
-})
-
-
+});
