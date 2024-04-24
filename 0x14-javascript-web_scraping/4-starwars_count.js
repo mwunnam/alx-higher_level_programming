@@ -9,6 +9,9 @@ request(apiUrl, (error, response, body) => {
   if (error) {
     console.error(error);
   }
+  if (response.statusCode !== 200) {
+    return;
+  }
   const films = JSON.parse(body).results;
   const wedgeAntillesMovies = films.filter(film =>
     film.characters.includes('https://swapi-api.alx-tools.com/api/people/' + characterId + '/'));
