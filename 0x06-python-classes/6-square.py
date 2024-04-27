@@ -43,14 +43,13 @@ class Square:
         if not instance(value, tuple) or len(value) != 2:
             raise TypeError('position must be a tuple of 2 positive intergers')
 
-        elif not all(instance(i, int) for i in value):
+        if not all(instance(i, int) for i in value):
             raise TypeError('position must be a tuple of 2 positive intergers')
 
-        elif value[0] < 0 or value[1] < 0:
+        if value[0] < 0 or value[1] < 0:
             raise TypeError('position must be a tuple of 2 positive intergers')
 
-        else:
-            self.__position = value
+        self.__position = value
 
     def area(self):
         return self.__size ** 2
