@@ -1,3 +1,3 @@
-$(document).ready(function(){
+$(document).ready(function () {
   $('body').find('header').css('color', '#FF0000');
 });
